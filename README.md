@@ -18,14 +18,16 @@ The co-mutation communities exhibit hierarchical organization in weekly co-mutat
 The initial dictionary was composed of all the co-mutation communities detected at 1st week (from 1 to 7 March 2020), where phylogenetic relationships were determined by their hierarchical containment in the arborescence. This was done by 'ComutationCommunityTree.R', where we designated the week parameter as "2020-09". 
 
 #### Step 2.2 Creation of weekly dictionary tree  
-
+Since 2nd week, the dictionary trees will be built through a ‘union’ of two trees: last week’s dictionary tree and current week’s co-mutation community tree. Before union, similar co-mutation communities on these two trees should be first merged. All these are performed by 'DictionaryCuration.R'.
 
 #### Step 2.2.1 Merging current week’s co-mutation communities into dictionary  
+Co-mutation communities identified at the current week may have been included in the dictionary. While some are fresh communities composed of completely new mutations that have not been detected before, or some have common but not identical mutations in last week’s dictionary. These communities were adjusted based on the principle that preserved the historical dictionary structure as much as possible where the Jaccard index was used to measure similarity of paired communities.
 
 #### Step 2.2.2 Re-creation of current week’s co-mutation community tree  
+We re-built the co-mutation community tree at the current week using communities after adjustment according to the flowchart described in step 1.3. Before that, communities, that are identified as intermediate nodes in last week's dictionary tree and leading to those communities present at the current week, will be appended.
 
 #### Step 2.2.3 Union of last week’s dictionary tree and current week’s community tree    
-
+We executed the union of two trees using ‘union’ function in R igraph. All communities (nodes) and their hierarchical relationships (edges) included in at least one tree will be preserved as part of the new dictionary tree.
 
 ### References
 1. Mainali KP, Slud E, Singer MC, Fagan WF. A better index for analysis of co-occurrence and similarity. Sci Adv (2022) 8(4):eabj9204. doi: 10.1126/sciadv.abj9204.
