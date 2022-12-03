@@ -14,17 +14,17 @@ We pick up the co-mutation pairs with false discovery rate <0.001. Each pair of 
 The co-mutation communities exhibit hierarchical organization in weekly co-mutation network. This hierarchy can be captured by division of the viral genomes and their hierarchical containment according to the detected communities' presence or not. We built an arborescence, a directed rooted tree, to depict their concatenated containment between these divisions and then used its topological ordering to find the hierarchical relationship. These are done by 'ComutationCommunityTree.R'.
 
 ### Step 2 Dynamic creation of a co-mutation community dictionary tree
-Step 2.1 Initial dictionary tree  
+#### Step 2.1 Initial dictionary tree  
 The initial dictionary was composed of all the co-mutation communities detected at 1st week (from 1 to 7 March 2020), where phylogenetic relationships were determined by their hierarchical containment in the arborescence. This was done by 'ComutationCommunityTree.R', where we designated the week parameter as "2020-09". 
 
-Step 2.2 Creation of weekly dictionary tree  
+#### Step 2.2 Creation of weekly dictionary tree  
 
 
-Step 2.2.1 Merging current week’s co-mutation communities into dictionary  
+#### Step 2.2.1 Merging current week’s co-mutation communities into dictionary  
 
-Step 2.2.2 Re-creation of current week’s co-mutation community tree  
+#### Step 2.2.2 Re-creation of current week’s co-mutation community tree  
 
-Step 2.2.3 Union of last week’s dictionary tree and current week’s community tree    
+#### Step 2.2.3 Union of last week’s dictionary tree and current week’s community tree    
 
 
 ### References
