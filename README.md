@@ -15,8 +15,10 @@ The co-mutation communities exhibit hierarchical organization in weekly co-mutat
 
 ### Step 2 Dynamic creation of a co-mutation community dictionary tree
 Step 2.1 Initial dictionary tree  
+The initial dictionary was composed of all the co-mutation communities detected at 1st week (from 1 to 7 March 2020), where phylogenetic relationships were determined by their hierarchical containment in the arborescence. This was done by 'ComutationCommunityTree.R', where we designated the week parameter as "2020-09". 
 
 Step 2.2 Creation of weekly dictionary tree  
+
 
 Step 2.2.1 Merging current week’s co-mutation communities into dictionary  
 
