@@ -11,6 +11,7 @@ We model a mutation's tendency to be present or absent in a genome where another
 We pick up the co-mutation pairs with false discovery rate <0.001. Each pair of co-mutations will result in a connection or an edge leading to an adjacency matrix which defines the co-mutation network. Because the affinity model indiscriminately identifies homogeneous and heterogeneous co-mutation pairs, respectively abbreviated as HoCPs and HeCPs, we inherited the rate of the co-mutation (RCM) from Qin et al. (2021) to detect HoCPs. The HoCPs identified form an aggregated community structure with groups of strongly linked nodes. Then the Girvan-Newman partition algorithm (Newman et al. 2004) is used to discover these HoCP groups, named with co-mutation communities. All this work is executed by the 'CoNet.R'. 
 
 #### Step 1.3 Weekly co-mutation community tree
+The co-mutation communities exhibit hierarchical organization in weekly co-mutation network. This hierarchy can be captured by division of the viral genomes and their hierarchical containment according to the detected communities' presence or not. We built an arborescence, a directed rooted tree, to depict their concatenated containment between these divisions and then used its topological ordering to find the hierarchical relationship. These are done by 'ComutationCommunityTree.R'.
 
 ### Step 2 Dynamic creation of a co-mutation community dictionary tree
 Step 2.1 Initial dictionary tree  
