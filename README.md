@@ -8,7 +8,7 @@ We repeatedly executed weekly detection protocols for real-time tracking of circ
 We model a mutation's tendency to be present or absent in a genome where another mutation is already present. This tendency to co-occur is measured by a new index insensitive to prevalence, α, proposed by Mainali et al. (2022) and termed to be an affinity metric of co-occurrence (see the original paper). We develop the 'CooccurMatrix.R' to generate the co-occurrence matrix  between every mutation pair for each weekly data. Then the affinity metrics are calculated through the 'AffinityModel.R', where the algorithm, developed by Mainali et al. (2022) and embeded in the R package 'CooccurrenceAffinity', is invoked.
 
 #### Step 1.2 Co-mutation network and co-mutation communities  
-We pick up the co-mutation pairs with false discovery rate <0.001. Each pair of co-mutations will result in a connection or an edge leading to an adjacency matrix which defines the co-mutation network. 
+We pick up the co-mutation pairs with false discovery rate <0.001. Each pair of co-mutations will result in a connection or an edge leading to an adjacency matrix which defines the co-mutation network. Because the affinity model indiscriminately identifies homogeneous and heterogeneous co-mutation pairs, respectively abbreviated as HoCPs and HeCPs, we inherited the rate of the co-mutation (RCM) from Qin et al. (2021) to detect HoCPs. The HoCPs identified form an aggregated community structure with groups of strongly linked nodes. Then the Girvan-Newman partition algorithm () is used to discover these HoCP groups, named with co-mutation communities, which is executed by the 'CoNet.R'. 
 
 #### Step 1.3 Weekly co-mutation community tree
 
@@ -26,5 +26,6 @@ Step 2.2.3 Union of last week’s dictionary tree and current week’s community
 
 ### References
 1. Mainali KP, Slud E, Singer MC, Fagan WF. A better index for analysis of co-occurrence and similarity. Sci Adv (2022) 8(4):eabj9204. doi: 10.1126/sciadv.abj9204.
-2. 
+2. Qin L, Ding X, Li Y, Chen Q, Meng J, Jiang T. Co-mutation modules capture the evolution and transmission patterns of SARS-CoV-2. Brief Bioinform (2021) 22(6):bbab222. doi: 10.1093/bib/bbab222.
+3. Newman ME, Girvan M. Finding and evaluating community structure in networks. Phys Rev E Stat Nonlin Soft Matter Phys (2004) 69(2 Pt 2):026113. doi: 10.1103/PhysRevE.69.026113.
 
