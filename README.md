@@ -5,7 +5,7 @@ We repeatedly executed weekly detection protocols for real-time tracking of circ
 
 ### Step 1 Weekly co-mutation community network
 #### Step 1.1 The affinity model for identification of paired co-mutations  
-We model a mutation's tendency to be present or absent in a genome where another mutation is already present. This tendency to co-occur is measured by a new index insensitive to prevalence, α, proposed by Mainali et al. (2022) and termed to be an affinity metric of co-occurrence (see the original paper). 
+We model a mutation's tendency to be present or absent in a genome where another mutation is already present. This tendency to co-occur is measured by a new index insensitive to prevalence, α, proposed by Mainali et al. (2022) and termed to be an affinity metric of co-occurrence (see the original paper). We develop the 'CooccurMatrix.R' to generate the co-occurrence matrix  between every mutation pair for each weekly data. Then the affinity metrics are calculated through the 'AffinityModel.R', where the algorithm developed by Mainali et al. (2022) from the R package 'CooccurrenceAffinity' is invoked.
 
 #### Step 1.2 Co-mutation network and co-mutation communities  
 
