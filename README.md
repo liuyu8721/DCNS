@@ -4,7 +4,8 @@ A co-mutation network surveillance framework was devised to dynamically investig
 We repeatedly executed weekly detection protocols for real-time tracking of circulating co-mutation network using our method. Two main steps are included in this process.
 
 #### Step 1 Weekly co-mutation community network
-Step 1.1 The affinity model for identification of paired co-mutations
+Step 1.1 The affinity model for identification of paired co-mutations  
+
 Step 1.2 Co-mutation network and co-mutation communities
 Step 1.3 Weekly co-mutation community tree
 
