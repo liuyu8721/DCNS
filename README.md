@@ -20,5 +20,10 @@ Step 2.2.1 Merging current week’s co-mutation communities into dictionary
 
 Step 2.2.2 Re-creation of current week’s co-mutation community tree  
 
-Step 2.2.3 Union of last week’s dictionary tree and current week’s community tree  
+Step 2.2.3 Union of last week’s dictionary tree and current week’s community tree    
+
+
+### References
+1. Mainali KP, Slud E, Singer MC, Fagan WF. A better index for analysis of co-occurrence and similarity. Sci Adv (2022) 8(4):eabj9204. doi: 10.1126/sciadv.abj9204.
+2. 
 
