@@ -18,7 +18,7 @@ The co-mutation communities exhibit hierarchical organization in weekly co-mutat
 The initial dictionary was composed of all the co-mutation communities detected at 1st week (from 1 to 7 March 2020), where phylogenetic relationships were determined by their hierarchical containment in the arborescence. This was done by 'ComutationCommunityTree.R', where we designated the week parameter as "2020-09". 
 
 #### Step 2.2 Creation of weekly dictionary tree  
-Since 2nd week, the dictionary trees will be built through a ‘union’ of two trees: last week’s dictionary tree and current week’s co-mutation community tree. Before union, similar co-mutation communities on these two trees should be first merged. All these are performed by 'DictionaryCuration.R'.
+Since 2nd week, the dictionary trees will be built through a ‘union’ of two trees: last week’s dictionary tree and current week’s co-mutation community tree. Before union, similar co-mutation communities on these two trees should be first merged. All these are performed by 'DictionaryCuration.R'. Detail description about the algorithm is followed below.
 
 #### Step 2.2.1 Merging current week’s co-mutation communities into dictionary  
 Co-mutation communities identified at the current week may have been included in the dictionary. While some are fresh communities composed of completely new mutations that have not been detected before, or some have common but not identical mutations in last week’s dictionary. These communities were adjusted based on the principle that preserved the historical dictionary structure as much as possible where the Jaccard index was used to measure similarity of paired communities.
